@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+	<title>Lung Disease Classifier</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="static/styles/front.css">
+		</head>
+<p> </p> <p> </p><p> </p><p> </p><p> </p> <p> </p><p> </p><p> </p>
+<h2><b>Lung Disease Classifier</b></h2>
+<form action = "http://127.0.0.1:5000/uploader" method = "POST" 
+ enctype = "multipart/form-data">
+  <div class="input-file-container">  
+    <input class="input-file" type="file" id = 'my-file' name = 'file'  />
+    
+    <label tabindex="0" for="my-file" class="input-file-trigger" onchange="readURL(this);">Select a file...</label>
+  </div>
+  <p> </p> <p> </p><p> </p><p> </p>
+  <img id="blah" src="#" alt="your image" />
+  <p> </p> <p> </p><p> </p><p> </p>
+  <p class="file-return"></p>
+   <input tabindex="0" class="input-file-trigger" type = "submit" value = "         Submit         "/>
+</form>
+ <script src="{{ url_for('static', filename='upload.js') }}"></script>
+  <script src="{{ url_for('static', filename='front.js') }}"></script>
+
+<p class="txtcenter">Made by BE group 6 <br />Class of EXTC 2016-20</p>

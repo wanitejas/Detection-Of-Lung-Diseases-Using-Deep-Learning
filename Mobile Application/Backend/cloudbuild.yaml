@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/tejasxrayapp/backend12', '.' ]
+images: 
+- 'gcr.io/tejasxrayapp/backend12'
+timeout: 6000s

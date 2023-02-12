@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lung Disease Classifier</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/styles/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/styles/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/styles/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/styles/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/styles/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/styles/util.css">
+	<link rel="stylesheet" type="text/css" href="static/styles/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+				<div class="table100 ver1 m-b-110">
+					<div class="table100-head">
+						<table>
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">Disease</th>
+									<th class="cell100 column2">Probability</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+
+					<div class="table100-body js-pscroll">
+						<table>
+							
+							<tbody>
+								{% for key,value in result.items() %}
+								<tr class="row100 body">
+									<td class="cell100 column1">{{key}}</td>
+									<td class="cell100 column2">{{value}}</td>
+								</tr>
+								{%endfor%}
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+	
+ <p> Actaul disease from csv: {{actual}} </p>
+
+<!--===============================================================================================-->	
+	<script src="static/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/popper.js"></script>
+	<script src="static/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+			
+		
+	</script>
+<!--===============================================================================================-->
+	<script src="static/main.js"></script>
+
+</body>
+</html>
