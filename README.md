@@ -1,4 +1,3 @@
-# Detection-Of-Lung-Diseases-Using-Deep-Learning
 
 # Video Demo
 
